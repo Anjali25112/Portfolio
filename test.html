@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjali Kumari - Ultimate Data Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;;
+            background: #131314;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+         /* Navigation Styles */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #1a1a1a;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .nav-brand {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #4da6ff;
+        }
+         .portfolio-container {
+            background: rgba(26, 26, 46, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .profile-section {
+            flex: 1;
+        }
+
+        .name-title {
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+        
+        .main-title {
+            text-align: left;
+            color: #ffffff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.0rem;
+            font-weight: 700;
+            margin-bottom: 2.5px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #f7fbff, #ced5e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .portfolio-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .about-section {
+            background: #1b2532e2;
+            
+            padding: 30px;
+            position: relative;
+            width: 100%;
+        }
+        .quote-box {
+            
+            color: #f5ebeb;
+            font-style: Times;
+            font-size: medium;
+            padding: 15px 20px;
+            margin-top: 20px;
+            
+           
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .projects-section {
+            background: #1b2532e2;
+            
+            padding: 30px;
+            width: 100%;
+        }
+        
+
+        .section-title {
+            color: #4da6ff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: #4da6ff;
+          
+            margin-right: 12px;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        .profile-text p {
+            color: #4da6ff;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .profile-image {
+            width: 275px;
+            height: 275px;
+           
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            background: #8535065c;
+            padding: 15px;
+           
+           
+        }
+
+        .info-item h4 {
+            color: #ff9500;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .info-item p {
+            color: #d2931f;
+            font-size: 0.9rem;
+        }
+
+        .info-item a {
+            color: #4da6ff;
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-section {
+            margin-top: 30px;
+        }
+
+        .skills-section .section-title::before {
+            content: '🛠️';
+        }
+
+        .skills-category {
+            background: #8535065c;
+            padding: 15px;
+           
+            margin-bottom: 15px;
+           
+        }
+
+        .skills-category h4 {
+            color: #ff9500;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .skills-category p {
+            color: #cccccc;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .soft-skills {
+            margin-top: 20px;
+        }
+
+        .soft-skills .section-title::before {
+            content: '💭';
+        }
+
+        .soft-skills-content {
+            background: #3a3a3a;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #ff9500;
+        }
+
+        .soft-skills-content h4 {
+            color: #ff9500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .soft-skills-content p {
+            color: #cccccc;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 20px;
+}
+
+            .project-card {
+                background: #3a3a3aa0;
+                padding: 20px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .project-image {
+                width: 100%;
+                height: 170px;
+                margin-bottom: 15px;
+                overflow: hidden;
+            }
+
+            .project-image img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+            }
+
+            .project-title {
+                color: #f4f6f8;
+                font-size: 0.9rem;
+                font-weight: bold;
+                margin-bottom: 5px;
+                line-height: 1.3;
+            }
+
+            .project-subtitle {
+                color: #cccccc;
+                font-size: 0.8rem;
+                margin-bottom: 12px;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin-bottom: 10px;
+            }
+
+            .tag {
+                background: #ff950079;
+                color: #f9f7f7;
+                padding: 3px 8px;
+                font-size: 0.7rem;
+                font-weight: bold;
+            }
+
+            .tag.blue {
+                background: #4da6ff65;
+            }
+
+            .tag.green {
+                background: #00cc667e;
+            }
+
+            .tag.purple {
+                background: #9966ff4a;
+            }
+
+            .tag.red {
+                background: #ff666662;
+            }
+
+            .project-link {
+                color: #4da6ff;
+                font-size: 0.8rem;
+                text-decoration: none;
+                display: block;
+                margin-top: 8px;
+            }
+
+            .project-link:hover {
+                text-decoration: underline;
+            }
+
+            /* Status tag styles */
+            .status-tag {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                padding: 4px 10px;
+                font-size: 0.65rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                border-radius: 12px;
+                z-index: 10;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .status-completed {
+                background: #00cc66;
+                color: #ffffff;
+            }
+
+            .status-ongoing {
+                background: #ff9500;
+                color: #ffffff;
+            }
+
+            .status-planning {
+                background: #4da6ff;
+                color: #ffffff;
+            }
+
+            .status-paused {
+                background: #666666;
+                color: #ffffff;
+            }
+            .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            box-sizing: border-box;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 0;
+            border-radius: 0;
+            max-width: none;
+            max-height: none;
+            overflow-y: auto;
+            border: none;
+            box-sizing: border-box;
+            color: #e0e0e0;
+        }
+
+        .modal-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #4da6ff;
+            color: #4da6ff;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 1001;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: #4da6ff;
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        /* Modal Header */
+        .modal-header {
+            background: linear-gradient(135deg, #1e1e1e 0%, #3a3a3a 100%);
+            padding: 30px 40px;
+            border-bottom: 2px solid #4da6ff;
+        }
+
+        .modal-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .modal-image-section {
+            margin-bottom: 0 px;
+           
+            overflow: hidden;
+            border: 2px solid #4da6ff;
+        }
+
+        .modal-preview-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            object-position: top;
+            
+            transition: transform 0.3s ease;
+        }
+
+        .modal-preview-image:hover {
+            transform: scale(1.02);
+        }
+
+
+
+        /* Project Header */
+        .modal-project-header {
+            padding: 40px;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .modal-project-title {
+            color: #4da6ff;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .meta-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-label {
+            min-width: 120px;
+            color: #888;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .meta-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .meta-tag {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .meta-tag.excel { background: #107C41; color: white; }
+        .meta-tag.powerquery { background: #F2C811; color: black; }
+        .meta-tag.pivot { background: #D83B01; color: white; }
+        .meta-tag.cleaning { background: #0078D4; color: white; }
+        .meta-tag.transform { background: #881798; color: white; }
+        .meta-tag.modeling { background: #00BCF2; color: white; }
+        .meta-tag.viz { background: #00A1F1; color: white; }
+
+        .project-github-link {
+            color: #4da6ff;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            transition: color 0.3s ease;
+        }
+
+        .project-github-link:hover {
+            color: #66b3ff;
+            text-decoration: underline;
+        }
+
+        .project-description {
+            color: #ccc;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        /* Modal Sections */
+        .modal-sections {
+            padding: 0 40px 40px 40px;
+        }
+
+        .modal-section {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-section:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 25px;
+            cursor: pointer;
+            background: rgba(77, 166, 255, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: rgba(77, 166, 255, 0.15);
+        }
+
+        .section-icon {
+            font-size: 1.3rem;
+            color: #4da6ff;
+        }
+
+        .section-title {
+            color: #4da6ff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            flex-grow: 1;
+        }
+
+        .section-arrow {
+            color: #4da6ff;
+            transition: transform 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .section-content {
+            display: none;
+            padding: 30px 25px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .section-content.expanded {
+            display: block;
+        }
+
+        .section-content.expanded + .section-header .section-arrow {
+            transform: rotate(180deg);
+        }
+
+        .goal-section, .findings-section {
+            margin-bottom: 25px;
+        }
+
+        .section-content h4 {
+            color: #ff9500;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .section-content p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .section-content ul {
+            margin-left: 20px;
+            color: #ccc;
+        }
+
+        .section-content li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .tech-stack, .data-specs {
+            margin-bottom: 25px;
+        }
+
+        .tech-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-item {
+            background: rgba(77, 166, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: #4da6ff;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .project-steps {
+            margin-top: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: #4da6ff;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h5 {
+            color: #4da6ff;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            color: #ccc;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .modal-header {
+                padding: 20px;
+            }
+
+            .modal-project-header {
+                padding: 20px;
+            }
+
+            .modal-sections {
+                padding: 0 20px 20px 20px;
+            }
+
+            .modal-project-title {
+                font-size: 2rem;
+            }
+
+            .meta-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .toc-items {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-items {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Subtle Certifications Section */
+        .certifications-section {
+            background:  #1b2532e2;
+            
+            padding: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .certification-card {
+        position: relative; /* Enables absolute children positioning */
+        background: #333333;
+        padding: 15px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        }
+
+        .certification-card:hover {
+            background: #383838;
+            border-left-color: #00ff88;
+        }
+
+        .cert-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(77, 166, 255, 0.1);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cert-content h4 {
+            color: #fefeff;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+
+        .cert-issuer {
+            color: #cccccc;
+            font-size: 0.75rem;
+            margin-bottom: 1px;
+        }
+
+        .cert-date {
+            color: #999999;
+            font-size: 0.7rem;
+        }
+                .cert-link {
+            color: white;
+            text-decoration: underline;
+            font-weight: 500;
+            margin-top: 8px;
+            display: inline-block;
+        }
+        .cert-status {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background-color: #00ff88;
+        color: #000;
+        font-size: 0.65rem;
+        font-weight: bold;
+        padding: 3px 8px;
+        border-radius: 10px;
+        z-index: 1;
+        }          
+
+        /* Subtle Achievements Section */
+        .achievements-section {
+            background: #1b2532e2;
+            
+            padding: 30px;
+            width: 100%;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .achievement-card {
+            background: #333333;
+            padding: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .achievement-card:hover {
+            background: #383838;
+          
+        }
+
+        .achievement-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 149, 0, 0.1);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .achievement-content h4 {
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+
+        .achievement-org {
+            color: #cccccc;
+            font-size: 0.75rem;
+            margin-bottom: 1px;
+        }
+
+        .achievement-date {
+            color: #999999;
+            font-size: 0.7rem;
+        }
+
+        
+
+        /* Thank You Section */
+        .thank-you-section {
+            background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
+           
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #3a3a3a;
+            margin-top: 30px;
+        }
+
+        .thank-you-section h2 {
+            color: #4da6ff;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .thank-you-section p {
+            color: #cccccc;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .contact-emphasis {
+            color: #ff9500;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                align-self: center;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .about-section, .projects-section {
+                padding: 20px;
+            }
+
+            .certifications-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+            .modal-content {
+                padding: 20px;
+                width: 95%;
+                max-height: 90vh;
+            }
+            
+            .project-card {
+                padding: 15px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .thank-you-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <div class="nav-brand">Anjali Kumari-- Data Portfolio</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link active" data-section="about">About Me</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#internships" class="nav-link" data-section="achievements">Interships</a>
+                <a href="#achievements" class="nav-link" data-section="achievements">Leadership</a>
+                <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+               
+            </div>
+        </div>
+    </nav>
+     <div class="container">
+        <h1 class="main-title">Anjali Kumari-- Data Portfolio</h1>
+
+
+        
+        <div class="portfolio-grid">
+            <!-- About Me Section -->
+            <!-- About Me Section -->
+            <section id="about" class="section active"></section>
+            <div class="about-section">
+                <div class="section-title">About Me</div>
+                
+                <div class="profile-section">
+                    <div class="profile-text">
+                        <p>Hi! I'm Anjali, a data-driven problem solver with a growing passion for analytics and technology. I enjoy turning raw data into meaningful insights that help drive smart, informed decisions.
+
+With hands-on experience in SQL, Python, Power BI, and Excel, I'm continuously expanding my skills to Machine Learning.</p>
+                        
+                        <blockquote class="quote-box">
+  “Information is the oil of the 21st century, and analytics is the combustion engine.”<br />
+  <span class="quote-author">— Peter Sondergaard, SVP at Gartner</span>
+</blockquote>
+                    </div>
+                    
+                       
+                   
+                    <div class="profile-image">
+                        <img src="assets\WhatsApp Image 2025-05-12 at 9.35.33 AM.jpeg" alt="Profile Picture" />
+                    </div>
+                </div>
+                <div class="info-grid">
+                   <div class="info-item">
+                           <a href="https://drive.google.com/file/d/14Hw5ctV9UV-zo6aIVRLFfGs8MbojrjpX/view?usp=sharing" target="_blank" class="resume-link">
+                          <h4><i class="fas fa-file-alt" style="color: orange; margin-right: 8px;"></i>Resume</h4>
+                          </a>
+                        
+                   </div>
+                   
+               
+                    <div class="info-item">
+                      <h4 style="text-transform: none;">
+                      <i class="fas fa-envelope" style="color: orange; margin-right: 8px;"></i>anjalikumari25112@gmail.com
+                        </h4>
+                       
+                    </div>
+                    <div class="info-item">
+                     <h4>
+                      <a href="https://www.linkedin.com/in/anjali-kumari-4071b824a" target="_blank" style="text-decoration: underline; color: inherit;">
+                         <i class="fab fa-linkedin" style="color: orange; margin-right: 8px;"></i>LinkedIn
+                          </a>
+                         </h4>
+                    </div>
+
+                    <div class="info-item">
+                     <h4>
+                     <img src="assets\download (1).png" alt="NIT Silchar Logo"
+             style="height: 24px; vertical-align: middle; margin-right: 8px;">
+                     <span>National Institute of Technology, Silchar</span>
+                     </h4>
+                </div>
+
+                </div>
+
+                <div class="skills-section">
+                    <div class="skills-category">
+                        <h4>
+                        <span style="color: orange;">⚙️</span> TECHNICAL SKILLS
+                        </h4>
+
+                        <p></strong>Programming Languages:</strong> Python (intermediate; NumPy, pandas, matplotlib, seaborn, scikit-learn),SQL (MySQL, PostgreSQL),HTML, CSS, JavaScript (basic)<br>
+                        </strong>Data Tools :</strong> Power BI ,Microsoft Excel,Scikit-learn (basic machine learning),Streamlit,
+
+                           matplotlib, seaborn
+
+                                   Jupyter Notebook<br>
+                        </strong> Tools & Platforms:</strong>Git & GitHub,Jupyter Notebook,VS Code<br>
+                       </p>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h4>💡 SOFT SKILLS</h4>
+                        <p>Communication, Stakeholder Management,Teamwork & Collaboration,Problem-solving,Time Management,Adaptability</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Projects Section -->
+            <section id="projects" class="section"></section>
+            <div class="projects-section">
+                <div class="section-title">Pick a project</div>
+                
+                
+                <div class="projects-grid">
+                    <!-- Fashion store analytics -->
+                    <div class="project-card" onclick="openModal('modal1')">
+                        <div class="project-image">
+                            <img src="assets\Screenshot 2025-05-23 160426.png" alt="Fashion Store Analytics" />
+                        </div>
+                        <div class="project-title"> FASHION STORE ANALYSIS</div>
+                        <div class="project-subtitle">Dashboard built in Microsoft Excel</div>
+                        <div class="project-tags">
+                            <span class="tag blue">Microsoft Excel</span>
+                            <span class="tag">Power Query</span>
+                            <span class="tag blue">Pivot Tables</span>
+                             
+                          
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag green">Data Cleaning</span>
+                            <span class="tag">Data Transformation</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Data Modelling</span>
+                         
+                        </div>
+                       
+                    </div>
+
+                    <!-- Banking Risk Analytics -->
+                    <div class="project-card" onclick="openModal('modal2')">
+                        <div class="project-image">
+                            <img src="assets\Cover-23-Indias-Corporate-Banking-Sector.png" alt="Banking Risk Analysis" />
+                        </div>
+                        <div class="project-title">BANKING RISK ANALYSIS</div>
+                        <div class="project-subtitle">Dashboard made using Power BI </div>
+                        <div class="project-tags">
+                            <span class="tag blue">Power BI</span>
+                             <span class="tag red">EDA using Python</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag green">Data Cleaning</span>
+                            <span class="tag">Data Transformation</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag green">Data Analysis</span>
+                        </div>
+                       
+                    </div>
+
+                    <!-- Netflix Project -->
+                    <div class="project-card" onclick="openModal('modal3')">
+                        <div class="project-image">
+                            <img src="assets\netflix.jpg" alt="Zomato Data Analysis" />
+                        </div>
+                        <div class="project-title">NETFLIX DATA CLEANING AND ANALYSIS</div>
+                        <div class="project-subtitle">Netflix ELT Data Pipeline</div>
+                        <div class="project-tags">
+                            <span class="tag">SQL </span>
+                             <span class="tag red">Python</span>
+                             <span class="tag green">EDA</span>
+                             <span class="tag blue">Jupyter Notebook</span>
+                        </div>
+                        <div class="project-tags">
+                            
+                            <span class="tag green">Data Cleaning</span>
+                            <span class="tag red">Data Transformation</span>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Weather Forecasting Dashboard -->
+                    <div class="project-card" onclick="openModal('modal4')">
+                        <div class="project-image">
+                            <img src="assets\weather.jpg" alt="Weather Forecasting Dashboard" />
+                        </div>
+                        <div class="project-title">WEATHER FORECASTING DASHBOARD</div>
+                        <div class="project-subtitle">Dashboard creation </div>
+                        <div class="project-tags">
+                            <span class="tag">Streamlit</span>
+                            <span class="tag red">CSS</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag green">Python</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Data Visualization</span>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Faasos Dummy dataset analysis-->
+                    <div class="project-card" onclick="openModal('modal5')">
+                        <div class="project-image">
+                            <img src="assets\5fe78176d3acf65c617ceddeac7ffb28.avif" alt="Faasos Data Analysis" />
+                        </div>
+                        <div class="project-title">FAASOS DUMMY DATASET ANALYSIS</div>
+                        <div class="project-subtitle">Customer Behavior & Revenue Analytics</div>
+                        <div class="project-tags">
+                            <span class="tag blue">SQL</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag green">MYSQL</span>
+                            <span class="tag">DATA CLEANING</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Data Analysis</span>
+                           
+                        </div>
+                        
+                    </div>
+
+                    <!-- Social Media Sentiment Analysis -->
+                    <div class="project-card" onclick="openModal('modal6')">
+                         <div class="status-tag status-ongoing">Ongoing</div>
+                        <div class="project-image">
+                            <img src="assets\65155ee0a96a837b72406c15_63c03b9d759618c9dab0d7d4_blog20final-03.jpeg" alt="Sentiment Analysis" />
+                        </div>
+                        <div class="project-title">📱 SOCIAL MEDIA SENTIMENT ANALYSIS</div>
+                        <div class="project-subtitle">NLP & Text Mining Project</div>
+                        <div class="project-tags">
+                            <span class="tag blue">Python</span>
+                            <span class="tag">NLTK</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag green">Natural Language Processing</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Text Mining</span>
+                            <span class="tag green">Machine Learning</span>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+             <!-- Achievements Section -->
+        <section id="internships" class="section">
+            <div class="achievements-section">
+                <div class="section-title">Internships</div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <img src="assets\iitg logo.png" alt="IITG Logo" style="height: 40px; width: 40px;" />
+                        </div>
+                        <div class="achievement-content">
+                            <h4>RESEARCH INTERNSHIP </h4>
+                            <p class="achievement-org">2024,May-June</p>
+                            <p class="achievement-org">Smart Materials and Structures Lab</p>
+                            <p class="achievement-date">Experimental Data Analysis on piezoelectric property of Materials</p>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</section>
+             <!-- Achievements Section -->
+        <section id="achievements" class="section">
+            <div class="achievements-section">
+                <div class="section-title">Leadership Roles</div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <img src="assets\download (1).png" alt="NIT Silchar Logo" style="height: 40px; width: 40px;" />
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Training and Placement Coordinator</h4>
+                            <p class="achievement-org">Training and Placement Cell, NIT Silchar</p>
+                            <p class="achievement-date">2025–Present</p>
+                        </div>
+                    </div>
+            
+            <div class="achievement-card">
+                 <div class="achievement-icon">
+                            <img src="assets\illuminits.jpg" alt="Illuminits" style="height: 40px; width: 40px;" />
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Hindi Sahitya Samiti Head</h4>
+                            <p class="achievement-org">ILLUMINITS-Literary,Arts and Publication Society,NIT Silchar</p>
+                            <p class="achievement-date">2024-2025</p>
+                        </div>
+                    </div>
+            
+            <div class="achievement-card">
+                 <div class="achievement-icon">
+                            <img src="assets\Gyansagar.jpg" alt="Gyansagar" style="height: 40px; width: 40px;" />
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Head of Content Team</h4>
+                            <p class="achievement-org">GYANSAGAR-Non-profit Social Service Oraganisation,NIT Silchar</p>
+                            <p class="achievement-date">2024-2025</p>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+</section>
+           <!-- Certifications Section -->
+<section id="certifications" class="section">
+    <div class="certifications-section">
+        <div class="section-title">Certifications</div>
+        
+        <div class="certifications-grid">
+            <div class="certification-card">
+                <div class="cert-icon">🐍</div>
+                <div class="cert-content">
+                    <h4>Python Beginner to advanced for Data Professionals</h4>
+                    <p class="cert-issuer">CodeBasics</p>
+                    <a href="https://codebasics.io/certificate/CB-48-500706" target="_blank" class="cert-link">Certificate</a>
+                </div>
+            </div>
+            
+            <div class="certification-card">
+                <div class="cert-icon">📊</div>
+                <div class="cert-content">
+                    <h4>Microsoft Power BI Desktop for Business Intelligence</h4>
+                    <p class="cert-issuer">Udemy</p>
+                    <a href="https://drive.google.com/file/d/1VQqXNaFA7_qUUn-7YmDh9tSbc1Nl8OJ1/view?usp=sharing" target="_blank" class="cert-link">Certificate</a>
+                </div>
+            </div>
+            
+            <div class="certification-card">
+                <span class="cert-status">Ongoing</span>
+                <div class="cert-icon">🤖</div>
+                <div class="cert-content">
+                    <h4>Complete Data Science,Machine Learning,DL,NLP Bootcamp</h4>
+                    <p class="cert-issuer">Udemy</p>
+                    <p class="cert-date"></p>
+                </div>
+            </div>
+            
+            <div class="certification-card">
+                <div class="cert-icon">📈</div>
+                <div class="cert-content">
+                    <h4>Professional Certification-Corporate readiness & career impact skills</h4>
+                    <p class="cert-issuer">Define Career</p>
+                    <a href="https://drive.google.com/file/d/1hwrelzT7LteLWLb_BoMs9mhGAODaP35d/view?usp=sharing" target="_blank" class="cert-link">Certificate</a>
+                </div>
+            </div>
+            
+            <div class="certification-card">
+                <div class="cert-icon">🌱</div>
+                <div class="cert-content">
+                    <h4>Loreal Paris Sustainability Challenge</h4>
+                    <p class="cert-issuer">Loreal</p>
+                    <a href="https://drive.google.com/file/d/1SvY-EhhAkqN5rlzr6Im2f03Cvl0eRBWz/view?usp=sharing" target="_blank" class="cert-link">Certificate</a>
+                </div>
+            </div>
+            <div class="certification-card">
+                <div class="cert-icon">🥇</div>
+                <div class="cert-content">
+                    <h4>ALL INDIA INTER-NIT  competition</h4>
+                    <p class="cert-issuer">Vice-Captain-Women's yoga Team </p>
+                    <a href="https://drive.google.com/file/d/1opE1-sOO4ieg2ykzdNse8Sh8cCJsg-yM/view?usp=sharing" target="_blank" class="cert-link">Certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+           
+            
+
+          
+    <!-- Thank You Section -->
+    <div class="thank-you-section">
+                <h2>Thank You for Visiting</h2>
+                <p> If you're interested in discussing potential opportunities or collaborations, <span class="contact-emphasis">reach out via email or LinkedIn</span>.</p>
+                <p>Looking forward to connecting with you!</p>
+            </div>
+        </div>
+    </div>                         
+
+     
+
+    <!-- Modals for detailed project views -->
+    <!-- Modals for detailed project views -->
+    
+    <!-- modal1-->
+    
+    <div id="modal1" class="modal">
+         <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal1')">&times;</button>
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-image-section">
+                    <img src="assets\00-promo (53).webp" alt="Project Preview" class="modal-preview-image">
+                </div>
+                
+
+            </div>
+
+            <!-- Project Title Section -->
+            <div class="modal-project-header">
+                <div class="project-icon">🛒</div>
+                <h1 class="modal-project-title">Fashion Store Analysis</h1>
+                
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">🛠️ Tool</span>
+                        <div class="meta-tags">
+                            <span class="tag blue">Microsoft Excel</span>
+                            <span class="tag green">Power Query</span>
+                            <span class="tag red">Pivot Tables</span>
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📊 Project Type</span>
+                        <div class="meta-tags">
+                            <span class="tag green">Data Cleaning</span>
+                            <span class="tag yellow">Data Transformation</span>
+                            <span class="tag blue">Data Modelling</span>
+                            <span class="tag red">Data Visualization</span>
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🔗 Link</span>
+                        <a href="https://github.com/Anjali25112/Fashion_Analytics_Dash" class="project-github-link">github.com/Anjali25112/Fashion_Analytics_Dash</a>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📝 Description</span>
+                        <p class="project-description">Creating comprehensive sales analytics dashboard for fashion retail store that analyzes customer behavior, sales trends, and provides actionable business insights.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expandable Sections -->
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('summary')">
+                        <span class="section-icon">📊</span>
+                        <span class="section-title">Summary</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="summary">
+                        <div class="goal-section">
+                            <h4>Goal</h4>
+                            <p>To analyze sales, customer behavior and product performance for a fashion retail store and provide actionable insights to improve business performance. This project involved analyzing 2+ years of transactional data from a major fashion store selling in both online and offline mode.</p>
+                        </div>
+                        <div class="findings-section">
+                            <h4>Key Findings</h4>
+                            <ul>
+                                <li>High return rate of 19.47% indicates quality control issues</li>
+                                <li>B2B segment contributes 50% of total revenue</li>
+                                <li>Customer retention rate extremely low at 0.04%</li>
+                                <li>Southern and Western regions show highest performance</li>
+                                <li>Peak sales during festive seasons with 40% increase</li>
+                            </ul>
+                        </div>
+                        <div class="findings-section">
+                            <h4>Action Plans Proposed</h4>
+                            <ul>
+                                <li>Strengthen Quality Control Measures
+Implement multi-stage product checks and stricter vendor quality audits.</li>
+                                <li>Launch Customer Retention Program
+Create a structured loyalty program with reward points, discounts, and exclusive offers.
+
+Automate follow-ups and re-engagement campaigns via email/SMS/WhatsApp.
+
+</li>
+                                <li>Improve Customer Feedback Integration
+Collect structured feedback during returns and post-purchase.
+
+Use sentiment analysis to understand dissatisfaction and refine offerings.
+
+</li>
+                                <li>Capitalize on Festive Season Sales
+Develop a pre-festive go-to-market strategy with themed promotions and bundles.
+
+Prepare backend systems, delivery teams, and ad creatives well in advance.</li>
+                                <li>Build a Post-Sale Engagement Funnel
+Use personalized emails, satisfaction surveys, and how-to content after purchase.
+
+Encourage product reviews, referrals, and repeat purchases with incentives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('environment')">
+                        <span class="section-icon">⚙️</span>
+                        <span class="section-title">Project Environment</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="environment">
+                        <div class="tech-stack">
+                            <h4>Technology Stack</h4>
+                            <div class="tech-items">
+                                <div class="tech-item">Microsoft Excel 2021</div>
+                                <div class="tech-item">Power Query Editor</div>
+                                <div class="tech-item">Pivot Tables & Charts</div>
+                                <div class="tech-item">Advanced Excel Formulas</div>
+                            </div>
+                        </div>
+                        <div class="data-specs">
+                            <h4>Data Specifications</h4>
+                            <p>Dataset: 2+ years of transactional data <br>
+                            Records: 1000+ transactions<br>
+                            File Size: 15MB<br>
+                            Data Sources: Generated using python code</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('scope')">
+                        <span class="section-icon">🎯</span>
+                        <span class="section-title">Key Features</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="scope">
+                        <div class="project-steps">
+                            
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h5>Visualized monthly trends of orders and sales using dynamic charts, slicers, and filters for real-time, user-driven analysis.</h5>
+                                   
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h5>Analyzed sales by age group, gender, and clothing size to identify key demographics and optimize product offerings.</h5>
+                                    
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h5>Mapped regional sales distribution across India to uncover high-performing states and regional demand patterns.</h5>
+                                    
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">4</span>
+                                <div class="step-content">
+                                    <h5>Displayed crucial business metrics like Return Rate, Average Order Value, B2B Contribution, and Customer Retention for strategic decision-making.</h5>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+           </div> 
+        </div>
+    </div>
+
+   <!-----modal2-->
+
+    <!-- FIXED MODAL 2 - Added the missing closing </div> tag -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal2')">&times;</button>
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-image-section">
+                    <img src="assets\Cover-23-Indias-Corporate-Banking-Sector.png" alt="Project Preview" class="modal-preview-image">
+                </div>
+            </div>
+
+            <!-- Project Title Section -->
+            <div class="modal-project-header">
+                <div class="project-icon">🏦</div>
+                <h1 class="modal-project-title">Banking Risk Analysis</h1>
+                
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">🛠️ Tool</span>
+                        <div class="meta-tags">
+                            <span class="tag blue">Power BI</span>
+                            <span class="tag red">EDA using Python</span>
+                            <span class="tag green">DAX</span>
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📊 Project Type</span>
+                        <div class="meta-tags">
+                            <span class="meta tag green">Data Cleaning</span>
+                            <span class="meta tag blue">Data Transformation</span>
+                            <span class="meta tag red">Data Modelling</span>
+                            <span class="meta tag blue">Data Visualization</span>
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🔗 Link</span>
+                        <a href="https://github.com/Anjali25112/Power-BI" class="project-github-link">https://github.com/Anjali25112/Power-BI</a>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📝 Description</span>
+                        <p class="project-description">The project focused on minimizing lending risks by analyzing customer behavior, liquidity patterns, and regulatory red flags. Enabled data-driven decisions through interactive dashboards and key financial metrics.</p>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Expandable Sections -->
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('summary2')">
+                        <span class="section-icon">📊</span>
+                        <span class="section-title">Summary</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="summary2">
+                        <div class="goal-section">
+                            <h4>Goal</h4>
+                            <p>The primary goal of this project was to develop a comprehensive risk analytics framework for a banking institution to identify, visualize, and mitigate financial risks associated with customer lending behavior.</p>
+                        </div>
+                        <div class="findings-section">
+                            <h4>Key Findings</h4>
+                            <ul>
+                                <li>86% Loan-to-Deposit Ratio identified, signaling liquidity risk under Basel III (threshold: >1.0 not ideal)</li>
+                                <li>59–70% of loans were business lending, indicating high revenue potential but sector concentration risk.</li>
+                                <li>Low savings account share (18–19%) of deposits highlighted a reliance on volatile checking accounts.</li>
+                                <li>Collateral Coverage near zero in some segments flagged emergency corrective actions.</li>
+                            </ul>
+                        </div>
+                        <div class="Actions-Section">
+                            <h4>Action Plans Proposed</h4>
+                            <ul>
+                                <li>Freeze new loan approvals temporarily until deposits increase</li>
+                                <li>Launch high-interest savings schemes (e.g., 5% APY for 12-month deposits) to attract more liquidity.</li>
+                                <li>Set a target Deposit-to-Loan ratio of ≥ 1.10 for healthy liquidity.</li>
+                                <li>Mandate minimum 150% collateral coverage for all new business loans.</li>
+                                <li>Implement dynamic risk-based interest rates:
+                                    <ul>
+                                        <li><strong>High risk (0.84K):</strong> Prime + 8%</li>
+                                        <li><strong>Mid risk (0.46K):</strong> Prime + 4%</li>
+                                        <li><strong>Low risk (0.16K):</strong> Prime + 1%</li>
+                                    </ul>
+                                </li>
+                                <li>Implement loan eligibility cap at Debt-to-Income (DTI) ≤ 3.0.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('environment2')">
+                        <span class="section-icon">⚙️</span>
+                        <span class="section-title">Project Environment</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="environment2">
+                        <div class="tech-stack">
+                            <h4>Technology Stack</h4>
+                            <div class="tech-items">
+                                <div class="tech-item">Power BI Desktop</div>
+                                <div class="tech-item">Python (Pandas, NumPy)</div>
+                                <div class="tech-item">DAX Formulas</div>
+                            </div>
+                        </div>
+                        <div class="data-specs">
+                            <h4>Data Specifications</h4>
+                            <p>Dataset: Banking transaction and customer data <br>
+                            Records: 3,000+ customer records<br>
+                            Data Sources: Online data from kaggle</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('scope2')">
+                        <span class="section-icon">🎯</span>
+                        <span class="section-title">Key Features</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="scope2">
+                        <div class="project-steps">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h5>Interactive Multi-Page Dashboard. Each page targets a specific domain: loans, deposits, risk management.</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h5>Integrated custom slicers for gender, income band, nationality, occupation, and time range.</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h5>Dynamic Financial Indicators: KPI cards and visuals for Total Loans & Deposits, LDR (Loan-to-Deposit Ratio), DTI (Debt-to-Income Ratio), Collateral Coverage, Risk Tier Distributions</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ^^^ ADDED THE MISSING CLOSING </div> TAG HERE ^^^ -->
+
+    <!-- MODAL 3 - Now properly structured -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal3')">&times;</button>
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-image-section">
+                    <img src="assets\netflixxx.jpg" alt="Project Preview" class="modal-preview-image">
+                </div>
+            </div>
+
+            <!-- Project Title Section -->
+            <div class="modal-project-header">
+                <div class="project-icon">🎬</div>
+                <h1 class="modal-project-title">Netflix Data cleaning and Analysis</h1>
+                
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">🛠️ Tool</span>
+                        <div class="meta-tags">
+                            <span class="tag blue">Python</span>
+                            <span class="tag red">SQL</span>
+                            <span class="tag yellow">ELT</span>
+                           
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📊 Project Type</span>
+                        <div class="meta-tags">
+                            <span class="tag blue">Data Cleaning</span>
+                            <span class="tag green">Data Transformation</span>
+        
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🔗 Link</span>
+                        <a href="#" class="project-github-link">https://github.com/Anjali25112/Netflix-Data-cleaning</a>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📝 Description</span>
+                        <p class="project-description">Netflix ELT Data Pipeline</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expandable Sections -->
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('summary3')">
+                        <span class="section-icon">📊</span>
+                        <span class="section-title">Summary</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="summary3">
+                        <div class="goal-section">
+                            <h4>Goal</h4>
+                            <p>To design and implement an End-to-End ELT (Extract, Load, Transform) data pipeline for Netflix Movies and TV Shows data using Python and SQL.</p>
+                        </div>
+                        <div class="findings-section">
+                            <h4>Key Findings</h4>
+                            <ul>
+                                <li>Developed a raw-to-staging data pipeline using MySQL.</li>
+                                <li>Automated data cleaning using Python.</li>
+                                <li>Learned to manage missing, duplicate, and foreign characters in data.</li>
+                                <li>Created a final staging table suitable for analysis.</li>
+                                <li>Answered real business questions using SQL queries on cleaned data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('environment3')">
+                        <span class="section-icon">⚙️</span>
+                        <span class="section-title">Project Environment</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="environment3">
+                        <div class="tech-stack">
+                            <h4>Technology Stack</h4>
+                            <div class="tech-items">
+                                <div class="tech-item">Python</div>
+                                <div class="tech-item">MySQL</div>
+                                <div class="tech-item">Jupyter Notebook </div>
+                                <div class="tech-item">Pandas, NumPy </div>
+                            </div>
+                        </div>
+                        <div class="data-specs">
+                            <h4>Data Specifications</h4>
+                            <p>Dataset: Netflix data <br>
+                            Records: 5,000+ customer records<br>
+                            File Size: 25MB<br>
+                           </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('scope3')">
+                        <span class="section-icon">🎯</span>
+                        <span class="section-title">Key Features</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="scope3">
+                        <div class="project-steps">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h5>Data Cleaning Operations:
+
+Handling foreign characters.
+
+Removing duplicates.
+
+Converting data types appropriately.
+
+Populating and managing missing values.
+
+Creating new dimension tables (e.g., for countries).
+
+</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h5>SQL-Based Analysis:
+
+Answering 5 real-world SQL questions post-cleaning.
+
+Demonstrates data comprehension and insight generation.</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h5>End-to-End Pipeline:
+
+Automates ELT stages.
+
+Reflects modern data engineering practices.
+
+</h5>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL 4 - Now properly structured -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal4')">&times;</button>
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-image-section">
+                    <img src="assets\weatherr.jpg" alt="Project Preview" class="modal-preview-image">
+                </div>
+            </div>
+
+            <!-- Project Title Section -->
+            <div class="modal-project-header">
+                <div class="project-icon">☁️</div>
+                <h1 class="modal-project-title">Weather Forecasting Dashboard</h1>
+                
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">🛠️ Tool</span>
+                        <div class="meta-tags">
+                            <span class="tag blue">Python</span>
+                            <span class="tag red">CSS</span>
+                            <span class="tag yellow">Streamlit</span>
+                           
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📊 Project Type</span>
+                        <div class="meta-tags">
+                            <span class="tag green">Data Visualization</span>
+                          
+        
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🔗 Link</span>
+                        <a href="#" class="project-github-link">https://github.com/Anjali25112/Streamlit_weather_dash</a>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📝 Description</span>
+                        <p class="project-description">Weather Dashboard using Streamlit</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expandable Sections -->
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('summary4')">
+                        <span class="section-icon">📊</span>
+                        <span class="section-title">Summary</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="summary4">
+                        <div class="goal-section">
+                            <h4>Goal</h4>
+                            <p>Built an interactive weather dashboard using Python, Streamlit, and CSS, visualizing historical weather data from a CSV file. The app provides key weather statistics (temperature, wind, conditions) along with a dynamic heatmap showcasing temperature trends across weeks and weekdays for Seattle.</p>
+                        </div>
+                        <div class="findings-section">
+                            <h4>Key Findings</h4>
+                            <ul>
+                                <li>Designed a functional data dashboard with real-time interactivity.</li>
+                                <li>Automated data cleaning using Python.</li>
+                                <li>Processed and visualized CSV-based weather data.</li>
+                                <li>Gained hands-on experience in web app development using Streamlit.</li>
+                                <li>Enhanced data storytelling through layout, styling, and visualization.
+
+</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('environment4')">
+                        <span class="section-icon">⚙️</span>
+                        <span class="section-title">Project Environment</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="environment4">
+                        <div class="tech-stack">
+                            <h4>Technology Stack</h4>
+                            <div class="tech-items">
+                                <div class="tech-item">Python</div>
+                                <div class="tech-item">Streamlit</div>
+                                <div class="tech-item">CSS </div>
+                                <div class="tech-item">VS Code</div>
+                            </div>
+                        </div>
+                        <div class="data-specs">
+                            <h4>Data Specifications</h4>
+                            <p>Dataset: Seattle weather data <br>
+                            Records: 5,000+ customer records<br>
+                            File Size: 25MB<br>
+                           </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('scope4')">
+                        <span class="section-icon">🎯</span>
+                        <span class="section-title">Key Features</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="scope4">
+                        <div class="project-steps">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h5>Clearly displays weather condition, maximum temperature, wind speed, and date using clean metric cards.
+
+</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h5>Temperature Heatmap
+
+Shows a weekly vs. daily heatmap of temperatures across the entire year, revealing seasonal and weekly patterns in Seattle.</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h5>Fully customized using CSS for a modern look, with consistent typography, iconography, and color palette.
+
+</h5>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 5 - Now properly structured -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal5')">&times;</button>
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-image-section">
+                    <img src="assets\faasos_modall.avif" alt="Project Preview" class="modal-preview-image">
+                </div>
+            </div>
+
+            <!-- Project Title Section -->
+            <div class="modal-project-header">
+                <div class="project-icon">🌯</div>
+                <h1 class="modal-project-title">Faasos Dummy Data Analysis</h1>
+                
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">🛠️ Tool</span>
+                        <div class="meta-tags">
+                            <span class="tag red">SQL</span>
+                            
+                           
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📊 Project Type</span>
+                        <div class="meta-tags">
+                            <span class="tag blue">Data Cleaning</span>
+                            <span class="tag green">Data Analysis</span>
+        
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🔗 Link</span>
+                        <a href="#" class="project-github-link">https://github.com/Anjali25112/FAASOS-DUMMY-DATASET-ANALYSIS</a>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📝 Description</span>
+                        <p class="project-description">Faasos Food Delivery Data Analysis Using SQL
+
+</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expandable Sections -->
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('summary5')">
+                        <span class="section-icon">📊</span>
+                        <span class="section-title">Summary</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="summary5">
+                        <div class="goal-section">
+                            <h4>Goal</h4>
+                            <p>To perform a comprehensive data analysis of a food delivery business using SQL by answering key business questions related to order volume, customer behavior, roll preferences, delivery performance, and operational efficiency</p>
+                        </div>
+                        <div class="findings-section">
+                            <h4>Key Findings</h4>
+                            <ul>
+                                <li>Analyzed individual driver performance, including average pickup time.</li>
+                                <li>Evaluated customer customization behavior, tracking how often rolls were modified.</li>
+                                <li>Discovered that Fridays had the highest order volume, and evening hours were peak time slots.
+
+</li>
+                              <li>Cleaned and transformed messy data (e.g., inconsistent cancellation values, nulls) using CTEs and conditional logic.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('environment5')">
+                        <span class="section-icon">⚙️</span>
+                        <span class="section-title">Project Environment</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="environment5">
+                        <div class="tech-stack">
+                            <h4>Technology Stack</h4>
+                            <div class="tech-items">
+                                <div class="tech-item">SQL (MySQL)</div>
+                                <div class="tech-item">Window Functions</div>
+                                <div class="tech-item">Subqueries </div>
+                                <div class="tech-item">CTEs </div>
+                            </div>
+                        </div>
+                        <div class="data-specs">
+                            <h4>Data Specifications</h4>
+                            <p>Dataset: Faasos messy data <br>
+                            
+                            File Size: 25MB<br>
+                           </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('scope5')">
+                        <span class="section-icon">🎯</span>
+                        <span class="section-title">Key Features</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="scope5">
+                        <div class="project-steps">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h5>Structured and normalized tables for drivers, rolls, ingredients, orders, and order items.
+
+</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h5>Roll Analysis:
+
+Count of rolls ordered and delivered.
+
+Roll preferences by type (veg/non-veg).
+
+Delivered orders with/without customization.</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h5>Customer Insights:
+
+Orders per customer, roll preferences.
+
+Behavioral segmentation (e.g., no change vs changed orders).
+
+
+
+</h5>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- MODAL 6 - Now properly structured -->
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal6')">&times;</button>
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-image-section">
+                    <img src="assets\65155ee0a96a837b72406c15_63c03b9d759618c9dab0d7d4_blog20final-03.jpeg" alt="Project Preview" class="modal-preview-image">
+                </div>
+            </div>
+
+            <!-- Project Title Section -->
+            <div class="modal-project-header">
+                <div class="project-icon">📱</div>
+                <h1 class="modal-project-title">Social Media Sentiment Analysis</h1>
+                
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-tags">🛠️ Tool</span>
+                        <div class="meta-tags">
+                            <span class="tag blue">Machine Learning</span>
+                            <span class="tag red">NLTK</span>
+                            <span class="tag green">Natural Language Processing</span>
+                            
+                           
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📊 Project Type</span>
+                        <div class="meta-tags">
+                            <span class="tag blue">Text Mining</span>
+                            <span class="tag green">Sentiment Analysis using data</span>
+        
+                        </div>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🔗 Link</span>
+                        <a href="#" class="project-github-link">https://github.com/Anjali25112/Sentiment-Analysis</a>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">📝 Description</span>
+                        <p class="project-description">AI-Powered Sentiment Analysis
+
+</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expandable Sections -->
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('summary6')">
+                        <span class="section-icon">📊</span>
+                        <span class="section-title">Summary</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="summary6">
+                        <div class="goal-section">
+                            <h4>Goal</h4>
+                            <p>>Building an end-to-end sentiment analysis system to monitor brand perception across social media platforms. The project involved processing millions of social media posts to extract meaningful insights about customer opinions and brand sentiment trends</p>
+                        </div>
+                        <div class="findings-section">
+                            <h4>Expected Outcomes</h4>
+                           <ul>
+                            <li>Real-time monitoring of customer sentiment across multiple social media platforms</li>
+                            <li>Actionable insights for marketing and PR teams to improve brand reputation</li>
+                            <li>Automated reports highlighting sentiment trends and emerging topics</li>
+                            <li>Improved decision-making through data-driven sentiment tracking</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('environment6')">
+                        <span class="section-icon">⚙️</span>
+                        <span class="section-title">Project Environment</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="environment6">
+                        <div class="tech-stack">
+                            <h4>Technology Stack</h4>
+                            <div class="tech-items">
+                                <div class="tech-item">Python & NLTK</div>
+                                <div class="tech-item">Machine Learning</div>
+                                <div class="tech-item">Text Mining </div>
+                                <div class="tech-item">API Integration</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-header" onclick="toggleSection('scope6')">
+                        <span class="section-icon">🎯</span>
+                        <span class="section-title">Expected Key Features</span>
+                        <span class="section-arrow">▼</span>
+                    </div>
+                    <div class="section-content" id="scope6">
+                        <div class="project-steps">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h5>strong>Text Preprocessing:</strong> Tokenization, lemmatization, stop word removal
+</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h5><strong>Feature Engineering:</strong> TF-IDF vectorization, word embeddings (Word2Vec</h5>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h5><strong>Sentiment Classification:</strong> Naive Bayes, SVM, and LSTM neural networks
+
+
+</h5>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const arrow = section.previousElementSibling.querySelector('.section-arrow');
+            
+            if (section.classList.contains('expanded')) {
+                section.classList.remove('expanded');
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                section.classList.add('expanded');
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.getElementsByClassName('modal');
+                for (let modal of modals) {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            }
+        });
+    
+        // Add loading animation for project cards
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+        });
+    </script>
+</body>
+</html>
